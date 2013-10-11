@@ -1,5 +1,5 @@
-AccidentalFish.Xamarin.DependencyInjection
-==========================================
+Code Generated IoC
+==================
 
 This is a simple dependency injector for Xamarin.iOS with a twist - it can generate C# code and cut out all the nasty reflection business associated with most AoT compiler compatible injection containers.
 
