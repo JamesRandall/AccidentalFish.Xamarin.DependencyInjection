@@ -104,6 +104,12 @@
     <Compile Include="ContainerTests.cs" />
     <Compile Include="Model\IShallowDependent.cs" />
     <Compile Include="Model\Implementation\ShallowDependent.cs" />
+    <Compile Include="Model\IDeepDependent.cs" />
+    <Compile Include="Model\Implementation\DeepDependent.cs" />
+    <Compile Include="CsharpGeneratorTests.cs" />
+    <Compile Include="TestContainer.cs" />
+    <Compile Include="Model\IMultipleParameterObject.cs" />
+    <Compile Include="Model\Implementation\MultipleParameterObject.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

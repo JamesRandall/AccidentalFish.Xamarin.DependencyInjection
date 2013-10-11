@@ -48,5 +48,6 @@
     <Compile Include="DependencyException.cs" />
     <Compile Include="ICodeGeneration.cs" />
     <Compile Include="Private\CsharpGenerator.cs" />
+    <Compile Include="Private\TypeExtensions.cs" />
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 using System;
 
-namespace AccidentalFish.Xamarin.DependencyInjection
+namespace AccidentalFish.Xamarin.DependencyInjection.Private
 {
 	internal class DependencyDefinition
 	{

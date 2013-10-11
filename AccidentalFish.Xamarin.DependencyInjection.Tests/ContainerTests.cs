@@ -23,7 +23,7 @@ namespace AccidentalFish.Xamarin.DependencyInjection.Tests
 		}
 
 		[Test]
-		public void SimpleDependencyResolves()
+		public void ShallowDependencyResolves()
 		{
 			// Arrange
 			IContainer container = new Container ();
@@ -36,6 +36,24 @@ namespace AccidentalFish.Xamarin.DependencyInjection.Tests
 			// Assert
 			Assert.IsNotNull (result);
 			Assert.IsNotNull (result.SimpleObject);
+		}
+
+		[Test]
+		public void DeepDependencyResolves()
+		{
+			// Arrange
+			IContainer container = new Container ();
+			container.Register<ISimpleObject, SimpleObject> ();
+			container.Register<IShallowDependent, ShallowDependent> ();
+			container.Register<IDeepDependent, DeepDependent> ();
+
+			// Act
+			IDeepDependent result = container.Resolve<IDeepDependent> ();
+
+			// Assert
+			Assert.IsNotNull (result);
+			Assert.IsNotNull (result.ShallowDependent);
+			Assert.IsNotNull(result.ShallowDependent.SimpleObject);
 		}
 	}
 }

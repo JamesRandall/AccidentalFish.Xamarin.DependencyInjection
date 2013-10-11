@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.IO;
+using AccidentalFish.Xamarin.DependencyInjection.Private;
 
 namespace AccidentalFish.Xamarin.DependencyInjection
 {
@@ -80,7 +81,7 @@ namespace AccidentalFish.Xamarin.DependencyInjection
 
 			ConstructorInfo constructor;
 			if (!_constructors.TryGetValue (typeToResolve, out constructor)) {
-				constructor = GetShortestConstructor (typeToResolve);
+				constructor = typeToResolve.GetShortestConstructor ();
 				_constructors [typeToResolve] = constructor;
 			}
 
@@ -103,28 +104,12 @@ namespace AccidentalFish.Xamarin.DependencyInjection
 			return resolvedObject;
 		}
 
-		private ConstructorInfo GetShortestConstructor(Type type)
-		{
-			ConstructorInfo[] constructors = type.GetConstructors (BindingFlags.Public | BindingFlags.Instance);
-			int minParameters = int.MaxValue;
-			ConstructorInfo constructor = null;
-
-			foreach (ConstructorInfo candidate in constructors) {
-				if (candidate.GetParameters ().Length < minParameters) {
-					minParameters = candidate.GetParameters ().Length;
-					constructor = candidate;
-				}
-			}
-
-			return constructor;
-		}
-
 		#region ICodeGeneration implementation
 
-		void ICodeGeneration.WriteToStream(LanguageEnum language, Stream stream)
+		void ICodeGeneration.WriteToStream(LanguageEnum language, string namespaceName, string containerClassName, Stream stream)
 		{
 			CsharpGenerator generator = new CsharpGenerator ();
-			generator.WriteToStream (stream, _definitions);
+			generator.WriteToStream (stream, namespaceName, containerClassName, _definitions);
 		}
 
 		#endregion
