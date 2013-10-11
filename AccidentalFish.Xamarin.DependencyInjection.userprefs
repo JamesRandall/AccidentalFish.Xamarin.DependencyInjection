@@ -1,23 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.7.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AccidentalFish.Xamarin.DependencyInjection/Private/CsharpGenerator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AccidentalFish.Xamarin.DependencyInjection/Container.cs">
     <Files>
-      <File FileName="AccidentalFish.Xamarin.DependencyInjection.Tests/ContainerTests.cs" Line="50" Column="10" />
-      <File FileName="AccidentalFish.Xamarin.DependencyInjection.Tests/Model/IShallowDependent.cs" Line="7" Column="38" />
-      <File FileName="AccidentalFish.Xamarin.DependencyInjection.Tests/Model/Implementation/ShallowDependent.cs" Line="15" Column="2" />
-      <File FileName="AccidentalFish.Xamarin.DependencyInjection.Tests/Model/IDeepDependent.cs" Line="11" Column="1" />
-      <File FileName="AccidentalFish.Xamarin.DependencyInjection.Tests/Model/Implementation/DeepDependent.cs" Line="4" Column="66" />
-      <File FileName="AccidentalFish.Xamarin.DependencyInjection.Tests/Model/Implementation/SimpleObject.cs" Line="4" Column="66" />
-      <File FileName="AccidentalFish.Xamarin.DependencyInjection/Private/CsharpGenerator.cs" Line="1" Column="1" />
-      <File FileName="AccidentalFish.Xamarin.DependencyInjection/Private/DependencyDefinition.cs" Line="3" Column="53" />
-      <File FileName="AccidentalFish.Xamarin.DependencyInjection/Container.cs" Line="88" Column="4" />
-      <File FileName="AccidentalFish.Xamarin.DependencyInjection/Private/TypeExtensions.cs" Line="4" Column="53" />
+      <File FileName="AccidentalFish.Xamarin.DependencyInjection/Container.cs" Line="24" Column="29" />
+      <File FileName="AccidentalFish.Xamarin.DependencyInjection/DependencyException.cs" Line="1" Column="1" />
+      <File FileName="AccidentalFish.Xamarin.DependencyInjection/Private/CsharpGenerator.cs" Line="78" Column="32" />
+      <File FileName="AccidentalFish.Xamarin.DependencyInjection/Private/DependencyDefinition.cs" Line="3" Column="61" />
+      <File FileName="AccidentalFish.Xamarin.DependencyInjection/Private/TypeExtensions.cs" Line="16" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
+        <State expanded="True">
           <Node name="AccidentalFish.Xamarin.DependencyInjection" expanded="True">
             <Node name="Private" expanded="True" />
+            <Node name="Container.cs" selected="True" />
           </Node>
           <Node name="AccidentalFish.Xamarin.DependencyInjection.Tests" expanded="True">
             <Node name="Model" expanded="True">
@@ -37,5 +33,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="AccidentalFish.Xamarin.DependencyInjection.Tests/CsharpGeneratorTests.cs" line="23" offsetX="332" offsetY="330" expression="memoryStream" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>

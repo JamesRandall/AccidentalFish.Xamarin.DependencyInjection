@@ -6,9 +6,9 @@ using System.Reflection;
 
 namespace AccidentalFish.Xamarin.DependencyInjection.Private
 {
-	internal class CsharpGenerator
+	internal class CsharpCodeGenerator : ICodeGenerator
 	{
-		public void WriteToStream (Stream stream, string namespaceName, string containerClassName, Dictionary<Type, DependencyDefinition> definitions)
+		public void WriteToStream (Dictionary<Type, DependencyDefinition> definitions, Stream stream, string namespaceName, string containerClassName)
 		{
 			StringBuilder stringBuilder = new StringBuilder ();
 			stringBuilder.AppendLine ("using System;");

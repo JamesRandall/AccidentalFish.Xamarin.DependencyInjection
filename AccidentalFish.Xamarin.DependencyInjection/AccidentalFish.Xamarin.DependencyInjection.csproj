@@ -46,8 +46,9 @@
     <Compile Include="Container.cs" />
     <Compile Include="Private\DependencyDefinition.cs" />
     <Compile Include="DependencyException.cs" />
-    <Compile Include="ICodeGeneration.cs" />
-    <Compile Include="Private\CsharpGenerator.cs" />
     <Compile Include="Private\TypeExtensions.cs" />
+    <Compile Include="Private\ICodeGenerator.cs" />
+    <Compile Include="CodeGenerator.cs" />
+    <Compile Include="Private\CsharpCodeGenerator.cs" />
   </ItemGroup>
 </Project>

@@ -6,10 +6,12 @@ using AccidentalFish.Xamarin.DependencyInjection.Private;
 
 namespace AccidentalFish.Xamarin.DependencyInjection
 {
-	public class Container : IContainer, ICodeGeneration
+	public class Container : IContainer
 	{
-		private Dictionary<Type, DependencyDefinition> _definitions = new Dictionary<Type, DependencyDefinition>();
-		private Dictionary<Type, ConstructorInfo> _constructors = new Dictionary<Type, ConstructorInfo>();
+		private readonly Dictionary<Type, DependencyDefinition> _definitions = new Dictionary<Type, DependencyDefinition>();
+		private readonly Dictionary<Type, ConstructorInfo> _constructors = new Dictionary<Type, ConstructorInfo>();
+
+		internal Dictionary<Type, DependencyDefinition> Definitions { get { return _definitions; } }
 
 		#region IContainer implementation
 
@@ -103,16 +105,6 @@ namespace AccidentalFish.Xamarin.DependencyInjection
 
 			return resolvedObject;
 		}
-
-		#region ICodeGeneration implementation
-
-		void ICodeGeneration.WriteToStream(LanguageEnum language, string namespaceName, string containerClassName, Stream stream)
-		{
-			CsharpGenerator generator = new CsharpGenerator ();
-			generator.WriteToStream (stream, namespaceName, containerClassName, _definitions);
-		}
-
-		#endregion
 	}
 }
 

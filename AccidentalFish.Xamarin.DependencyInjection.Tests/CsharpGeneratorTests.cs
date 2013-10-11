@@ -17,11 +17,12 @@ namespace AccidentalFish.Xamarin.DependencyInjection.Tests
 			// Arrange
 			IContainer container = new Container ();
 			container.Register<ISimpleObject, SimpleObject> ();
-			ICodeGeneration codeGeneration = (ICodeGeneration)container;
+
+			CodeGenerator codeGenerator = new CodeGenerator ();
 			MemoryStream memoryStream = new MemoryStream (); 
 
 			// Act
-			codeGeneration.WriteToStream (LanguageEnum.Csharp, "SomeNamespace", "TestContainer", memoryStream);
+			codeGenerator.WriteToStream(LanguageEnum.Csharp, container, memoryStream, "SomeNamespace", "TestContainer");
 			memoryStream.Position = 0;
 			string charpString;
 			using (StreamReader reader = new StreamReader(memoryStream)) {
@@ -40,11 +41,11 @@ namespace AccidentalFish.Xamarin.DependencyInjection.Tests
 			container.Register<ISimpleObject, SimpleObject> ();
 			container.Register<IShallowDependent, ShallowDependent> ();
 			container.Register<IDeepDependent, DeepDependent> ();
-			ICodeGeneration codeGeneration = (ICodeGeneration)container;
+			CodeGenerator codeGenerator = new CodeGenerator ();
 			MemoryStream memoryStream = new MemoryStream (); 
 
 			// Act
-			codeGeneration.WriteToStream (LanguageEnum.Csharp, "SomeNamespace", "TestContainer", memoryStream);
+			codeGenerator.WriteToStream(LanguageEnum.Csharp, container, memoryStream, "SomeNamespace", "TestContainer");
 			memoryStream.Position = 0;
 			string charpString;
 			using (StreamReader reader = new StreamReader(memoryStream)) {
@@ -64,11 +65,11 @@ namespace AccidentalFish.Xamarin.DependencyInjection.Tests
 			container.Register<IShallowDependent, ShallowDependent> ();
 			container.Register<IDeepDependent, DeepDependent> ();
 			container.Register<IMultipleParameterObject, MultipleParameterObject> ();
-			ICodeGeneration codeGeneration = (ICodeGeneration)container;
+			CodeGenerator codeGenerator = new CodeGenerator ();
 			MemoryStream memoryStream = new MemoryStream (); 
 
 			// Act
-			codeGeneration.WriteToStream (LanguageEnum.Csharp, "SomeNamespace", "TestContainer", memoryStream);
+			codeGenerator.WriteToStream(LanguageEnum.Csharp, container, memoryStream, "SomeNamespace", "TestContainer");
 			memoryStream.Position = 0;
 			string charpString;
 			using (StreamReader reader = new StreamReader(memoryStream)) {
