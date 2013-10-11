@@ -1,0 +1,34 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone.7.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AccidentalFish.Xamarin.DependencyInjection.Tests/Model/Implementation/ShallowDependent.cs">
+    <Files>
+      <File FileName="AccidentalFish.Xamarin.DependencyInjection.Tests/Model/ISimpleObject.cs" Line="8" Column="2" />
+      <File FileName="AccidentalFish.Xamarin.DependencyInjection.Tests/Model/Implementation/SimpleObject.cs" Line="9" Column="4" />
+      <File FileName="AccidentalFish.Xamarin.DependencyInjection.Tests/ContainerTests.cs" Line="30" Column="55" />
+      <File FileName="AccidentalFish.Xamarin.DependencyInjection.Tests/Model/IShallowDependent.cs" Line="1" Column="1" />
+      <File FileName="AccidentalFish.Xamarin.DependencyInjection.Tests/Model/Implementation/ShallowDependent.cs" Line="7" Column="42" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="AccidentalFish.Xamarin.DependencyInjection" expanded="True" />
+          <Node name="AccidentalFish.Xamarin.DependencyInjection.Tests" expanded="True" selected="True">
+            <Node name="Model" expanded="True">
+              <Node name="Implementation" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
